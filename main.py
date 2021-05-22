@@ -3,11 +3,13 @@ from pyecharts.charts import Bar, Timeline
 from pyecharts import options as opts
 from pyecharts.globals import ThemeType
 from time import localtime
-ret = p()
+import datetime
+rret = p()
+ret = rret[0]
 unix = 1583020800
-tm = localtime(unix)
-cur = localtime()
-space = cur.tm_yday - tm.tm_yday
+tm = datetime.date(2020, 3, 1)
+cur = datetime.date.today()
+space = (cur - tm).days
 confirm = []
 dead = []
 diff = 86400
@@ -20,19 +22,19 @@ for i in range(space):
     for j in range(5):
         confirm[i].append(ret[0][j][i])
         dead[i].append(ret[1][j][i])
-cntlst = ['United States', 'China', 'India', 'Spain', 'Mexico']
+cntlst = rret[1]
 '''
     Definition of a lot of Bars and a timeline
 '''
 timeline = (
-    Timeline(init_opts=opts.InitOpts(page_title = 'Coronavirus'))
+    Timeline(init_opts=opts.InitOpts(page_title = 'Coronavirus', theme = ThemeType.LIGHT))
 )
 for i in range(space):
     tm = tms[i]
     date = str(tm.tm_year) + '-' + str(tm.tm_mon) + '-' + str(tm.tm_mday)
     d = str(tm.tm_mon) + '-' + str(tm.tm_mday)
     bar = (
-        Bar()
+        Bar(init_opts=opts.InitOpts(theme = ThemeType.LIGHT))
         .add_xaxis(cntlst)
         .add_yaxis('Confirmed', confirm[i])
         .add_yaxis('Deaths', dead[i])
