@@ -53,10 +53,12 @@ flag = False
 if __name__ == '__main__':
     if len(argv) == 2:
         if(argv[1] == '--commandline' or argv[1] == '-cmd'):
-        flag = true
+            flag = True
 
 if flag == True:
     main(False)
+elif __name__ != '__main__':
+    pass
 else:
     print("Error: --commandline or -cmd not supplied and using command line version.")
     exit(2)
