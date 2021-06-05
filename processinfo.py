@@ -3,12 +3,18 @@ import pycountry
 import time
 
 
-def check(ccur) :
-    rr = pycountry.countries.search_fuzzy(ccur)
-    while(len(rr) == 0):
-        ccur = input('invalid response, please enter another country: ')
+def check(ccur):
+    try:
         rr = pycountry.countries.search_fuzzy(ccur)
-    return pycountry.countries.search_fuzzy(ccur)[0].name
+    except LookupError:
+        rr = []
+    while(len(rr) == 0 or input('is the country %s (y/n) ' % rr[0].name).lower() != 'y'):
+        ccur = input('Please enter another country: ')
+        try:
+            rr = pycountry.countries.search_fuzzy(ccur)
+        except LookupError:
+            rr = []
+    return rr[0].name
 
 def process():
     uctys = ['United States', 'China', 'India', 'Spain', 'Mexico']
@@ -16,6 +22,8 @@ def process():
     for i in range(5):
         cur = input('input a country: ')
         uctys[i] = check(cur)
+    print('Your countries are: ', end = '')
+    print(uctys[0], uctys[1], uctys[2], uctys[3], uctys[4], sep = ', ')
     tmbase = 1583020800000
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4241.0 Safari/537.36'
