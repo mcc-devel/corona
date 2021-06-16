@@ -40,7 +40,7 @@ for i in range(space):
         .add_yaxis('Confirmed', confirm[i])
         .add_yaxis('Deaths', dead[i])
         .reversal_axis()
-        .set_global_opts(title_opts=opts.TitleOpts(title='Coronavirus ' + date, subtitle='Coronavirus Statistics'))
+        .set_global_opts(title_opts=opts.TitleOpts(title='Coronavirus ' + date, subtitle='Coronavirus Statistics ' + date))
         .set_series_opts(label_opts=opts.LabelOpts(position='right'))
     )
     timeline.add(bar, d)

@@ -1,6 +1,5 @@
 from requests import get
 import pycountry
-import time
 
 
 def check(ccur):
@@ -8,10 +7,12 @@ def check(ccur):
         rr = pycountry.countries.search_fuzzy(ccur)
     except LookupError:
         rr = []
-    while(len(rr) == 0 or input('is the country %s (y/n) ' % rr[0].name).lower() != 'y'):
+    ans = input('is the country %s (y/n) ' % rr[0].name).lower() != 'y'
+    while len(rr) == 0 or ans:
         ccur = input('Please enter another country: ')
         try:
             rr = pycountry.countries.search_fuzzy(ccur)
+            ans = input('is the country %s (y/n) ' % rr[0].name).lower() != 'y'
         except LookupError:
             rr = []
     return rr[0].name
@@ -26,7 +27,7 @@ def process():
     print(uctys[0], uctys[1], uctys[2], uctys[3], uctys[4], sep = ', ')
     tmbase = 1583020800000
     headers = {
-        'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4241.0 Safari/537.36'
+        'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4531.0 Safari/537.36 Edg/93.0.921.0'
     }
     res = get('https://covid19.who.int/page-data/table/page-data.json', headers = headers)
     dic = res.json()['result']['pageContext']['countryGroups']
