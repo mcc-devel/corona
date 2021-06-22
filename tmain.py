@@ -33,7 +33,6 @@ timeline = (
 for i in range(space):
     tm = tms[i]
     date = str(tm.tm_year) + '-' + str(tm.tm_mon) + '-' + str(tm.tm_mday)
-    d = str(tm.tm_mon) + '-' + str(tm.tm_mday)
     bar = (
         Bar(init_opts=opts.InitOpts(theme=ThemeType.LIGHT))
         .add_xaxis(cntlst)
@@ -43,6 +42,6 @@ for i in range(space):
         .set_global_opts(title_opts=opts.TitleOpts(title='Coronavirus ' + date, subtitle='Coronavirus Statistics ' + date))
         .set_series_opts(label_opts=opts.LabelOpts(position='right'))
     )
-    timeline.add(bar, d)
+    timeline.add(bar, date)
 timeline.add_schema(play_interval=150)
 timeline.render('Corona.html')
