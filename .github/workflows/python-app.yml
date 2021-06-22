@@ -25,6 +25,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         pip install requests pycountry pyecharts --pre
-    - name: Test with pytest
+    - name: Create new Corona.html
       run: |
-        pytest
+        python tmain.py
