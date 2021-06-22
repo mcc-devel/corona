@@ -4,10 +4,11 @@
 name: Python application
 
 on:
+  schedule:
+  - cron: "0 0 *"
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+    - main
 
 jobs:
   build:
@@ -20,6 +21,11 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
+    - name: Prepare Git
+      run: |
+        git config --global user.name "mcc-devel"
+        git config --global user.email "jettzheng@foxmail.com"
+        git config --global user.author "mcc-devel"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -28,3 +34,8 @@ jobs:
     - name: Create new Corona.html
       run: |
         python tmain.py
+    - name: Push Corona.html to repo
+      run: |
+        git add Corona.html
+        git commit -m "Update Corona.html"
+        git push
