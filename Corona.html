@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="914d55fe90a7458393961bb733eb7110" class="chart-container" style="width:900px; height:500px;"></div>
+    <div id="e4951d6ccabf48519170d27780df1d57" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
-        var chart_914d55fe90a7458393961bb733eb7110 = echarts.init(
-            document.getElementById('914d55fe90a7458393961bb733eb7110'), 'light', {renderer: 'canvas'});
-        var option_914d55fe90a7458393961bb733eb7110 = {
+        var chart_e4951d6ccabf48519170d27780df1d57 = echarts.init(
+            document.getElementById('e4951d6ccabf48519170d27780df1d57'), 'light', {renderer: 'canvas'});
+        var option_e4951d6ccabf48519170d27780df1d57 = {
     "baseOption": {
         "series": [
             {
@@ -19,11 +19,11 @@
                 "name": "Confirmed",
                 "legendHoverLink": true,
                 "data": [
-                    33257768,
-                    118040,
-                    30134445,
+                    33285377,
+                    118358,
+                    30279331,
                     3777539,
-                    2487747
+                    2503408
                 ],
                 "showBackground": false,
                 "barMinHeight": 0,
@@ -53,11 +53,11 @@
                 "name": "Deaths",
                 "legendHoverLink": true,
                 "data": [
-                    597727,
-                    5451,
-                    393310,
+                    598504,
+                    5478,
+                    396730,
                     80766,
-                    231847
+                    232521
                 ],
                 "showBackground": false,
                 "barMinHeight": 0,
@@ -576,7 +576,10 @@
                 "2021-6-22",
                 "2021-6-23",
                 "2021-6-24",
-                "2021-6-25"
+                "2021-6-25",
+                "2021-6-26",
+                "2021-6-27",
+                "2021-6-28"
             ]
         },
         "xAxis": [
@@ -81127,10 +81130,511 @@
                 "borderWidth": 0,
                 "padding": 5
             }
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "Confirmed",
+                        "Deaths"
+                    ],
+                    "selected": {
+                        "Confirmed": true,
+                        "Deaths": true
+                    },
+                    "show": true,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],
+            "series": [
+                {
+                    "type": "bar",
+                    "name": "Confirmed",
+                    "legendHoverLink": true,
+                    "data": [
+                        33273007,
+                        118145,
+                        30183143,
+                        3777539,
+                        2493087
+                    ],
+                    "showBackground": false,
+                    "barMinHeight": 0,
+                    "barCategoryGap": "20%",
+                    "barGap": "30%",
+                    "large": false,
+                    "largeThreshold": 400,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "clip": true,
+                    "zlevel": 0,
+                    "z": 2,
+                    "label": {
+                        "show": true,
+                        "position": "right",
+                        "margin": 8
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                },
+                {
+                    "type": "bar",
+                    "name": "Deaths",
+                    "legendHoverLink": true,
+                    "data": [
+                        598143,
+                        5456,
+                        394493,
+                        80766,
+                        232068
+                    ],
+                    "showBackground": false,
+                    "barMinHeight": 0,
+                    "barCategoryGap": "20%",
+                    "barGap": "30%",
+                    "large": false,
+                    "largeThreshold": 400,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "clip": true,
+                    "zlevel": 0,
+                    "z": 2,
+                    "label": {
+                        "show": true,
+                        "position": "right",
+                        "margin": 8
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "xAxis": [
+                {
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "gridIndex": 0,
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "show": true,
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    }
+                }
+            ],
+            "yAxis": [
+                {
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "gridIndex": 0,
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "show": true,
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    },
+                    "data": [
+                        "United States",
+                        "China",
+                        "India",
+                        "Spain",
+                        "Mexico"
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "Coronavirus 2021-6-26",
+                    "subtext": "Coronavirus Statistics 2021-6-26",
+                    "padding": 5,
+                    "itemGap": 10
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            }
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "Confirmed",
+                        "Deaths"
+                    ],
+                    "selected": {
+                        "Confirmed": true,
+                        "Deaths": true
+                    },
+                    "show": true,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],
+            "series": [
+                {
+                    "type": "bar",
+                    "name": "Confirmed",
+                    "legendHoverLink": true,
+                    "data": [
+                        33285377,
+                        118241,
+                        30233183,
+                        3777539,
+                        2498357
+                    ],
+                    "showBackground": false,
+                    "barMinHeight": 0,
+                    "barCategoryGap": "20%",
+                    "barGap": "30%",
+                    "large": false,
+                    "largeThreshold": 400,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "clip": true,
+                    "zlevel": 0,
+                    "z": 2,
+                    "label": {
+                        "show": true,
+                        "position": "right",
+                        "margin": 8
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                },
+                {
+                    "type": "bar",
+                    "name": "Deaths",
+                    "legendHoverLink": true,
+                    "data": [
+                        598504,
+                        5469,
+                        395751,
+                        80766,
+                        232346
+                    ],
+                    "showBackground": false,
+                    "barMinHeight": 0,
+                    "barCategoryGap": "20%",
+                    "barGap": "30%",
+                    "large": false,
+                    "largeThreshold": 400,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "clip": true,
+                    "zlevel": 0,
+                    "z": 2,
+                    "label": {
+                        "show": true,
+                        "position": "right",
+                        "margin": 8
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "xAxis": [
+                {
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "gridIndex": 0,
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "show": true,
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    }
+                }
+            ],
+            "yAxis": [
+                {
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "gridIndex": 0,
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "show": true,
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    },
+                    "data": [
+                        "United States",
+                        "China",
+                        "India",
+                        "Spain",
+                        "Mexico"
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "Coronavirus 2021-6-27",
+                    "subtext": "Coronavirus Statistics 2021-6-27",
+                    "padding": 5,
+                    "itemGap": 10
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            }
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "Confirmed",
+                        "Deaths"
+                    ],
+                    "selected": {
+                        "Confirmed": true,
+                        "Deaths": true
+                    },
+                    "show": true,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],
+            "series": [
+                {
+                    "type": "bar",
+                    "name": "Confirmed",
+                    "legendHoverLink": true,
+                    "data": [
+                        33285377,
+                        118358,
+                        30279331,
+                        3777539,
+                        2503408
+                    ],
+                    "showBackground": false,
+                    "barMinHeight": 0,
+                    "barCategoryGap": "20%",
+                    "barGap": "30%",
+                    "large": false,
+                    "largeThreshold": 400,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "clip": true,
+                    "zlevel": 0,
+                    "z": 2,
+                    "label": {
+                        "show": true,
+                        "position": "right",
+                        "margin": 8
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                },
+                {
+                    "type": "bar",
+                    "name": "Deaths",
+                    "legendHoverLink": true,
+                    "data": [
+                        598504,
+                        5478,
+                        396730,
+                        80766,
+                        232521
+                    ],
+                    "showBackground": false,
+                    "barMinHeight": 0,
+                    "barCategoryGap": "20%",
+                    "barGap": "30%",
+                    "large": false,
+                    "largeThreshold": 400,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "clip": true,
+                    "zlevel": 0,
+                    "z": 2,
+                    "label": {
+                        "show": true,
+                        "position": "right",
+                        "margin": 8
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "xAxis": [
+                {
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "gridIndex": 0,
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "show": true,
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    }
+                }
+            ],
+            "yAxis": [
+                {
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "gridIndex": 0,
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "show": true,
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    },
+                    "data": [
+                        "United States",
+                        "China",
+                        "India",
+                        "Spain",
+                        "Mexico"
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "Coronavirus 2021-6-28",
+                    "subtext": "Coronavirus Statistics 2021-6-28",
+                    "padding": 5,
+                    "itemGap": 10
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            }
         }
     ]
 };
-        chart_914d55fe90a7458393961bb733eb7110.setOption(option_914d55fe90a7458393961bb733eb7110);
+        chart_e4951d6ccabf48519170d27780df1d57.setOption(option_e4951d6ccabf48519170d27780df1d57);
     </script>
 </body>
 </html>
